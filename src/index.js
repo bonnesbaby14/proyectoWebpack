@@ -1,6 +1,7 @@
-import sum from "./utilis/sum";
+import Template from './templates/Template.js';
+console.log('hola');
 
-
-const hello ="hello";
-
-console.log(sum(2,2));
+(async function App() {
+  const main = null || document.getElementById('main');
+  main.innerHTML = await Template();
+})();
