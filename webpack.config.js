@@ -20,9 +20,12 @@ module.exports = {
                 loader: "babel-loader"
             }
         },{
-            test:/\.css$/i,
-            use:[MiniCssExtractPlugin.loader,"css-loader"],
+            test:/\.css|.styl$/i,
+            use:[MiniCssExtractPlugin.loader,"css-loader","stylus-loader"],
             
+        },
+        {
+
         }
         ]
     },
