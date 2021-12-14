@@ -1,5 +1,5 @@
 const path = require("path");
-
+const HtmlWebackPlugin=require("html-webpack-plugin");
 module.exports = {
     entry: "./src/index.js",
     output: {
@@ -19,6 +19,13 @@ module.exports = {
             }
         }
         ]
-    }
+    },
+    plugins:[
+        new HtmlWebackPlugin({
+            inject:true,
+            template:"./public/index.html",
+            filename:"./index.html"
+        })
+    ]
 
 }
