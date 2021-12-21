@@ -4,6 +4,7 @@ const HtmlWebackPlugin=require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin= require("copy-webpack-plugin");
 
+const Dotenv =require("dotenv-webpack")
 
 
 const TerserPlugin=require ("terser-webpack-plugin");
@@ -74,6 +75,8 @@ module.exports = {
                 to:"assets/images"
             }]
         })
+        ,
+        new Dotenv()
 
     ],
     optimization:{
