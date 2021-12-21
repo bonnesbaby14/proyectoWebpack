@@ -9,12 +9,17 @@ const Dotenv =require("dotenv-webpack")
 
 const TerserPlugin=require ("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
+
 module.exports = {
     entry: "./src/index.js",
+
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[contenthash].js",
-        assetModuleFilename: "assets/images/[hash][ext][query]"
+        assetModuleFilename: "assets/images/[hash][ext][query]",
+        clean:true,
+
     },
     resolve: {
         extensions: [".js"],
@@ -76,7 +81,8 @@ module.exports = {
             }]
         })
         ,
-        new Dotenv()
+        new Dotenv(),
+
 
     ],
     optimization:{
