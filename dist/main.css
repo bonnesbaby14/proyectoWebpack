@@ -1,10 +1,12 @@
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/stylus-loader/dist/cjs.js!./src/styles/main.css ***!
   \****************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500);
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/stylus-loader/dist/cjs.js!./src/styles/main.css (1) ***!
-  \********************************************************************************************************************/
+@font-face {
+  font-family: "Ubuntu";
+  src: url(assets/images/adc7036cf956ac782873.woff2) format("woff2"), url(assets/images/aedf7260b8c979bbe54c.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
