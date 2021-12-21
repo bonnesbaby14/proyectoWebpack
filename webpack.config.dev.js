@@ -14,8 +14,8 @@ module.exports = {
         filename: "[name].[contenthash].js",
         assetModuleFilename: "assets/images/[hash][ext][query]"
     },
-    mode:"development",
-    watch:true,
+    mode: "development",
+    // watch: true,
     resolve: {
         extensions: [".js"],
         alias: {
@@ -80,5 +80,11 @@ module.exports = {
 
     ],
 
-
+    devServer: {
+        static: path.join(__dirname, "dist"),
+        compress: true,
+        historyApiFallback: true,
+        port: 3005,
+        open:true
+    }
 }
